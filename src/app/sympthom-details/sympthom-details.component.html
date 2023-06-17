@@ -1,0 +1,21 @@
+<div id="modal-content-wrapper">
+    <header id="modal-header">
+        <h1 id="modal-title">select your symthoms please   </h1>
+    </header>
+    <section id="modal-body" >
+        <h4>Select your toppings:</h4>
+        <section class="example-section" [formGroup]="toppings" *ngFor="let selectedbodydetail of data">
+         
+          
+                <p><mat-checkbox  (click)="getValue(selectedbodydetail)"  value="{{selectedbodydetail}}" >{{selectedbodydetail}}</mat-checkbox></p>          
+            
+           
+          </section>
+  
+             
+    </section>
+   
+    <footer id="modal-footer">
+          <button mat-raised-button class="buttonclose" id="modal-cancel-button" (click)="closeModal()">X</button>
+    </footer>
+</div>
