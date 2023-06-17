@@ -13,7 +13,7 @@ import { SympthomDetailsComponent } from '.././sympthom-details/sympthom-details
 export class HumanBodyComponent implements OnInit {
 
   bodyElem: string[]=[];
-  
+  error: string=""
   
   handleClick(bodyPartClicked:any) {
     console.log(bodyPartClicked)
@@ -95,9 +95,17 @@ bodyClick(e:any)
 
 
 next()
-{
-  
-  this.router.navigate(["/symthoms"]);
+{  
+ if(this.bodyElem.length == 0)
+ {
+  this.error="please select where you have pain";
+   setInterval(() => {  this.error="";
+   setInterval(() => { }, 1000)}, 3000)
+ }
+ else
+ {
+  this.router.navigate(["/information"]);
+ }
 }
 
 }

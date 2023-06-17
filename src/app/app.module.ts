@@ -17,10 +17,15 @@ import { SymthomsComponent } from './symthoms/symthoms.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { SympthomDetailsComponent } from './sympthom-details/sympthom-details.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { FormControl, Validators  } from '@angular/forms';
+import { NgForm } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes : Routes = [
 { path:'',component: HumanBodyComponent},
-{ path:'symthoms',component: SymthomsComponent}
+{ path:'symthoms',component: SymthomsComponent},
+{ path:'information',component: UserInfoComponent}
+
 ]
 @NgModule({
   declarations: [
@@ -45,6 +50,9 @@ const routes : Routes = [
     MatMenuModule,
     MatDialogModule,
     SympthomDetailsComponent,
+    FormsModule,
+    ReactiveFormsModule,
+  
  
     RouterModule.forRoot(routes)
   ],

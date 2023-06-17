@@ -41,6 +41,10 @@
 .human-body svg.legs {
     margin-left: -46.5px;
     top: 205px;
+<<<<<<< Updated upstream
+=======
+    z-index: 0;
+>>>>>>> Stashed changes
 }
 .human-body svg.hands {
     margin-left: -102.5px;

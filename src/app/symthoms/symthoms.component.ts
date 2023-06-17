@@ -22,9 +22,6 @@ constructor(private communService:CommunService, private router:Router, private 
 
   ngOnInit() : void
   {
-    
-  
-    
     window.onload = function () {
       const pieces = document.getElementsByTagName('svg');
       for (var i = 0; pieces.length; i++) {
@@ -34,9 +31,6 @@ constructor(private communService:CommunService, private router:Router, private 
               if (t.target.getAttribute('data-position') != null && data != null) data.innerHTML = t.target.getAttribute('data-position');
               if (t.target.parentElement.getAttribute('data-position') != null && data != null) data.innerHTML = t.target.parentElement.getAttribute('data-position');
               //t.style.fill = "red"
-             
-              
-             
           }
       }
   }
