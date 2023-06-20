@@ -21,10 +21,23 @@ import { FormControl, Validators  } from '@angular/forms';
 import { NgForm } from "@angular/forms";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { ResultComponent } from './result/result.component';
+import { HttpClientModule } from '@angular/common/http';
+import {CdkTextareaAutosize, TextFieldModule} from '@angular/cdk/text-field';
+
+import {GbtapiService} from "./services/gbtapi.service";
+import { WelcomeComponent } from './welcome/welcome.component'
 const routes : Routes = [
-{ path:'',component: HumanBodyComponent},
+  {path:'',component:WelcomeComponent},
+{ path:'humanbody',component: HumanBodyComponent},
 { path:'symthoms',component: SymthomsComponent},
-{ path:'information',component: UserInfoComponent}
+{ path:'information',component: UserInfoComponent},
+{ path:'result',component: ResultComponent}
 
 ]
 @NgModule({
@@ -33,6 +46,8 @@ const routes : Routes = [
     HumanBodyComponent,
     SymthomsComponent,
     UserInfoComponent,
+    ResultComponent,
+    WelcomeComponent,
    
    
   
@@ -51,13 +66,14 @@ const routes : Routes = [
     MatDialogModule,
     SympthomDetailsComponent,
     FormsModule,
-    ReactiveFormsModule,
-  
+    ReactiveFormsModule,MatSelectModule,MatInputModule,MatFormFieldModule,MatCheckboxModule,
+    TextFieldModule,
+    HttpClientModule,
  
     RouterModule.forRoot(routes)
   ],
   exports:[SympthomDetailsComponent],
-  providers: [CommunService],
+  providers: [CommunService,GbtapiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

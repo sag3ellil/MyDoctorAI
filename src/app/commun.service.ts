@@ -5,11 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class CommunService {
 
+
   private numberClickBody:number = 0;
   private selectedBodyPart:string='';
+  private age:string='';
+  private gender:string='';
   private symptomsSelected : string[]=[];
   constructor() { }
+  setGender(gender: any) {
+    this.gender=gender
+  }
+  setAge(age: any) {
+    this.age=age
+  }
 
+  getGender() {
+    return this.gender
+  }
+  getAge() {
+    return this.age
+  }
   getSymptomsSelected()
   {
     return this.symptomsSelected;

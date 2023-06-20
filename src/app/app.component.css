@@ -80,6 +80,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card-container {
+  padding: 2.5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

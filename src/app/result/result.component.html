@@ -1,0 +1,17 @@
+
+<h1>Doctor AI answer</h1>
+<mat-label>the best answer/advice is here:</mat-label>
+<br><br>
+<mat-form-field [style.fontSize]="8" style="width: 100%;">
+    <mat-label></mat-label>
+    <textarea matInput value="{{answer}}"
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="3"
+              cdkAutosizeMaxRows="300"></textarea>
+  </mat-form-field>
+  <br><br>
+  <mat-progress-bar mode="determinate" value="100"></mat-progress-bar>
+  <br><br>
+  <mat-label style="color:blueviolet">if the answer is too general, please be more specific when you select your disease.</mat-label>
+

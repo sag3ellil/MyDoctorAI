@@ -103,7 +103,6 @@ const bodyParts=  {
         "Pain in both feet"
     ],
     "hands": [
-        "Pain in both feet",
         "Wrist pain",
         "Pain when moving wrist",
         "Pain in hand or fingers",
