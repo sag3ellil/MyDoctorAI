@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class GbtapiService {
-  private baseUrl ="http://localhost:8082";
+  private baseUrl ="https://doctor-ia-api.onrender.com;
   constructor(private HttpClient:HttpClient) { }
 
   getChat(message:any):any
